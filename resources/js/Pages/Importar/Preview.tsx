@@ -16,7 +16,8 @@ interface Transacao {
     valor: number;
     tipo: string;
     identificador?: string;
-    duplicado?: boolean;
+    is_duplicate?: boolean;
+    duplicate_ids?: number[];
 }
 
 interface Props {
@@ -46,7 +47,7 @@ export default function Preview({
 }: Props) {
     const [selectedIndexes, setSelectedIndexes] = useState<number[]>(
         transacoes
-            .filter((t) => !t.duplicado)
+            .filter((t) => !t.is_duplicate)
             .map((t) => t.index)
     );
 
@@ -62,7 +63,7 @@ export default function Preview({
 
     const handleSelectAll = () => {
         const nonDuplicates = transacoes
-            .filter((t) => !t.duplicado)
+            .filter((t) => !t.is_duplicate)
             .map((t) => t.index);
         setSelectedIndexes(nonDuplicates);
     };
@@ -92,7 +93,7 @@ export default function Preview({
     const totalDespesas = transacoes
         .filter((t) => selectedIndexes.includes(t.index) && t.tipo === 'despesa')
         .reduce((sum, t) => sum + t.valor, 0);
-    const duplicadas = transacoes.filter((t) => t.duplicado).length;
+    const duplicadas = transacoes.filter((t) => t.is_duplicate).length;
 
     return (
         <AppLayout header="Preview de Importação">
@@ -204,7 +205,7 @@ export default function Preview({
                                 {transacoes.map((transacao) => (
                                     <tr
                                         key={transacao.index}
-                                        className={`${transacao.duplicado
+                                        className={`${transacao.is_duplicate
                                             ? 'bg-amber-50/50 opacity-60'
                                             : selectedIndexes.includes(transacao.index)
                                                 ? 'bg-emerald-50/50'
@@ -220,7 +221,7 @@ export default function Preview({
                                                 onChange={() =>
                                                     handleToggle(transacao.index)
                                                 }
-                                                disabled={transacao.duplicado}
+                                                disabled={transacao.is_duplicate}
                                                 className="h-4 w-4 rounded border-gray-300 text-pink-600 focus:ring-pink-500 disabled:opacity-50"
                                             />
                                         </td>
@@ -249,7 +250,7 @@ export default function Preview({
                                             {formatCurrency(transacao.valor)}
                                         </td>
                                         <td className="p-4">
-                                            {transacao.duplicado ? (
+                                            {transacao.is_duplicate ? (
                                                 <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-700">
                                                     <AlertTriangle className="h-3 w-3" />
                                                     Duplicada
