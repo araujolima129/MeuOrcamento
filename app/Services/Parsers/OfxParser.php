@@ -63,13 +63,17 @@ class OfxParser implements ParserInterface
             $valorStr = str_replace(',', '.', trim($m[1]));
             $valor = (float) $valorStr;
 
-            // Mantém o sinal original para exibição
+            // Guarda o valor absoluto
             $data['valor'] = abs($valor);
 
-            // Determina o tipo baseado no sinal do valor E no TRNTYPE
-            // Valor positivo = crédito/entrada (receita)
-            // Valor negativo = débito/saída (despesa)
-            if ($valor > 0) {
+            // Em OFX:
+            // - Valor POSITIVO = dinheiro entrando (crédito, estorno, pagamento recebido)
+            // - Valor NEGATIVO = dinheiro saindo (compra, débito)
+            // 
+            // Para cartão de crédito especificamente:
+            // - Positivo = pagamento/estorno (reduz sua dívida = bom = receita na visão do extrato)
+            // - Negativo = compra (aumenta sua dívida = despesa)
+            if ($valor >= 0) {
                 $data['tipo'] = 'receita';
             } else {
                 $data['tipo'] = 'despesa';

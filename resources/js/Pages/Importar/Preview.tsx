@@ -87,11 +87,11 @@ export default function Preview({
 
     const totalSelecionadas = selectedIndexes.length;
     const totalReceitas = transacoes
-        .filter((t) => selectedIndexes.includes(t.index) && t.valor > 0)
+        .filter((t) => selectedIndexes.includes(t.index) && t.tipo === 'receita')
         .reduce((sum, t) => sum + t.valor, 0);
     const totalDespesas = transacoes
-        .filter((t) => selectedIndexes.includes(t.index) && t.valor < 0)
-        .reduce((sum, t) => sum + Math.abs(t.valor), 0);
+        .filter((t) => selectedIndexes.includes(t.index) && t.tipo === 'despesa')
+        .reduce((sum, t) => sum + t.valor, 0);
     const duplicadas = transacoes.filter((t) => t.duplicado).length;
 
     return (
@@ -240,12 +240,12 @@ export default function Preview({
                                             )}
                                         </td>
                                         <td
-                                            className={`p-4 text-right font-semibold ${transacao.valor >= 0
+                                            className={`p-4 text-right font-semibold ${transacao.tipo === 'receita'
                                                 ? 'text-emerald-600'
                                                 : 'text-rose-600'
                                                 }`}
                                         >
-                                            {transacao.valor >= 0 ? '+' : '-'}
+                                            {transacao.tipo === 'receita' ? '+' : '-'}
                                             {formatCurrency(transacao.valor)}
                                         </td>
                                         <td className="p-4">
