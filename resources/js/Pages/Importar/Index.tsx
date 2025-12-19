@@ -1,10 +1,11 @@
 import AppLayout from '@/Layouts/AppLayout';
 import { Head, router, useForm } from '@inertiajs/react';
 import { useState } from 'react';
-import { Upload, FileText, Check, X, AlertTriangle } from 'lucide-react';
+import { Upload, FileText, Check, X, AlertTriangle, Edit2 } from 'lucide-react';
 
 interface Importacao {
     id: number;
+    nome: string | null;
     arquivo_original: string;
     tipo: string;
     status: string;
@@ -38,7 +39,12 @@ const statusLabels: Record<string, { label: string; color: string }> = {
 
 export default function Index({ importacoes, contas, cartoes }: Props) {
     const [dragOver, setDragOver] = useState(false);
-    const { data, setData, post, processing, reset } = useForm<{
+    const [editingId, setEditingId] = useState<number | null>(null);
+    const [editName, setEditName] = useState('');
+    const [saving, setSaving] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const { data, setData, post, processing, reset, errors } = useForm<{
         arquivo: File | null;
         conta_id: string;
         cartao_id: string;
@@ -67,6 +73,32 @@ export default function Index({ importacoes, contas, cartoes }: Props) {
             onSuccess: () => reset(),
         });
     };
+
+    const openRenameModal = (imp: Importacao) => {
+        setEditingId(imp.id);
+        setEditName(imp.nome || imp.arquivo_original);
+        setError(null);
+    };
+
+    const handleRename = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!editingId || !editName.trim()) return;
+
+        setSaving(true);
+        router.put(`/importar/${editingId}/rename`, { nome: editName.trim() }, {
+            onSuccess: () => {
+                setEditingId(null);
+                setEditName('');
+                setSaving(false);
+            },
+            onError: (errors) => {
+                setError(errors.nome || 'Erro ao salvar');
+                setSaving(false);
+            },
+        });
+    };
+
+    const canSubmit = data.arquivo && (data.conta_id || data.cartao_id);
 
     return (
         <AppLayout header="Importar Extrato">
@@ -106,11 +138,13 @@ export default function Index({ importacoes, contas, cartoes }: Props) {
 
                         <div className="grid gap-4 sm:grid-cols-2">
                             <div>
-                                <label className="mb-1 block text-sm font-medium text-gray-700">Conta (opcional)</label>
+                                <label className="mb-1 block text-sm font-medium text-gray-700">
+                                    Conta <span className="text-rose-500">*</span>
+                                </label>
                                 <select
                                     value={data.conta_id}
                                     onChange={(e) => { setData('conta_id', e.target.value); setData('cartao_id', ''); }}
-                                    className="w-full rounded-xl border-gray-200 focus:border-pink-500 focus:ring-pink-500"
+                                    className={`w-full rounded-xl border-gray-200 focus:border-pink-500 focus:ring-pink-500 ${errors.conta_id ? 'border-rose-500' : ''}`}
                                 >
                                     <option value="">Selecione...</option>
                                     {contas.map((c) => (
@@ -119,11 +153,13 @@ export default function Index({ importacoes, contas, cartoes }: Props) {
                                 </select>
                             </div>
                             <div>
-                                <label className="mb-1 block text-sm font-medium text-gray-700">Cartão (opcional)</label>
+                                <label className="mb-1 block text-sm font-medium text-gray-700">
+                                    Cartão <span className="text-rose-500">*</span>
+                                </label>
                                 <select
                                     value={data.cartao_id}
                                     onChange={(e) => { setData('cartao_id', e.target.value); setData('conta_id', ''); }}
-                                    className="w-full rounded-xl border-gray-200 focus:border-pink-500 focus:ring-pink-500"
+                                    className={`w-full rounded-xl border-gray-200 focus:border-pink-500 focus:ring-pink-500 ${errors.cartao_id ? 'border-rose-500' : ''}`}
                                 >
                                     <option value="">Selecione...</option>
                                     {cartoes.map((c) => (
@@ -133,10 +169,16 @@ export default function Index({ importacoes, contas, cartoes }: Props) {
                             </div>
                         </div>
 
+                        {(errors.conta_id || errors.cartao_id) && (
+                            <p className="text-sm text-rose-600">
+                                Selecione uma conta ou um cartão para vincular as transações.
+                            </p>
+                        )}
+
                         <div className="flex justify-end">
                             <button
                                 type="submit"
-                                disabled={!data.arquivo || processing}
+                                disabled={!canSubmit || processing}
                                 className="rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-2 text-sm font-medium text-white disabled:opacity-50"
                             >
                                 {processing ? 'Enviando...' : 'Importar'}
@@ -155,21 +197,31 @@ export default function Index({ importacoes, contas, cartoes }: Props) {
                             importacoes.data.map((imp) => (
                                 <div
                                     key={imp.id}
-                                    className="flex cursor-pointer items-center justify-between px-6 py-4 transition hover:bg-gray-50"
-                                    onClick={() => imp.status === 'pendente' && router.visit(`/importar/${imp.id}/preview`)}
+                                    className="flex items-center justify-between px-6 py-4 transition hover:bg-gray-50"
                                 >
-                                    <div className="flex items-center gap-4">
+                                    <div
+                                        className="flex flex-1 cursor-pointer items-center gap-4"
+                                        onClick={() => imp.status === 'pendente' && router.visit(`/importar/${imp.id}/preview`)}
+                                    >
                                         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100">
                                             <FileText className="h-5 w-5 text-gray-500" />
                                         </div>
                                         <div>
-                                            <p className="font-medium text-gray-900">{imp.arquivo_original}</p>
+                                            <p className="font-medium text-gray-900">{imp.nome || imp.arquivo_original}</p>
                                             <p className="text-sm text-gray-500">
                                                 {imp.created_at} • {imp.conta || imp.cartao || 'Não vinculado'}
                                             </p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-4">
+                                        <button
+                                            type="button"
+                                            onClick={(e) => { e.stopPropagation(); openRenameModal(imp); }}
+                                            className="rounded-lg p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                                            title="Renomear"
+                                        >
+                                            <Edit2 className="h-4 w-4" />
+                                        </button>
                                         <div className="text-right text-sm">
                                             <div className="flex items-center gap-2">
                                                 <Check className="h-4 w-4 text-emerald-500" />
@@ -196,6 +248,61 @@ export default function Index({ importacoes, contas, cartoes }: Props) {
                     </div>
                 </div>
             </div>
+
+            {/* Modal de Renomear */}
+            {editingId !== null && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    <div
+                        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                        onClick={() => setEditingId(null)}
+                    />
+                    <div className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+                        <button
+                            type="button"
+                            onClick={() => setEditingId(null)}
+                            className="absolute right-4 top-4 rounded-lg p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                        >
+                            <X className="h-5 w-5" />
+                        </button>
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">Renomear Importação</h3>
+
+                        <form onSubmit={handleRename} className="space-y-4">
+                            <div>
+                                <label className="mb-1 block text-sm font-medium text-gray-700">
+                                    Nome
+                                </label>
+                                <input
+                                    type="text"
+                                    value={editName}
+                                    onChange={(e) => setEditName(e.target.value)}
+                                    className="w-full rounded-xl border-gray-200 focus:border-pink-500 focus:ring-pink-500"
+                                    placeholder="Ex: Extrato Cartão BB Dezembro"
+                                    autoFocus
+                                />
+                                {error && <p className="mt-1 text-sm text-rose-600">{error}</p>}
+                            </div>
+
+                            <div className="flex justify-end gap-3">
+                                <button
+                                    type="button"
+                                    onClick={() => setEditingId(null)}
+                                    className="rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                                >
+                                    Cancelar
+                                </button>
+                                <button
+                                    type="submit"
+                                    disabled={saving || !editName.trim()}
+                                    className="rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-2 text-sm font-medium text-white disabled:opacity-50"
+                                >
+                                    {saving ? 'Salvando...' : 'Salvar'}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
         </AppLayout>
     );
 }

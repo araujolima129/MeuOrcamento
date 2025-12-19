@@ -17,6 +17,7 @@ class Importacao extends Model
         'user_id',
         'conta_id',
         'cartao_id',
+        'nome',
         'arquivo_original',
         'arquivo_path',
         'tipo',

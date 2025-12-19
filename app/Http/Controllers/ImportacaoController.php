@@ -23,6 +23,7 @@ class ImportacaoController extends Controller
             ->paginate(10)
             ->through(fn($i) => [
                 'id' => $i->id,
+                'nome' => $i->nome,
                 'arquivo_original' => $i->arquivo_original,
                 'tipo' => $i->tipo,
                 'status' => $i->status,
@@ -52,12 +53,14 @@ class ImportacaoController extends Controller
 
         $validated = $request->validate([
             'arquivo' => 'required|file|max:10240|mimes:ofx,qfx,csv,txt',
-            'conta_id' => 'nullable|exists:contas,id',
-            'cartao_id' => 'nullable|exists:cartoes,id',
+            'conta_id' => 'nullable|exists:contas,id|required_without:cartao_id',
+            'cartao_id' => 'nullable|exists:cartoes,id|required_without:conta_id',
         ], [
             'arquivo.required' => 'Selecione um arquivo para importar.',
             'arquivo.max' => 'O arquivo deve ter no máximo 10MB.',
             'arquivo.mimes' => 'Formato inválido. Use OFX, CSV ou TXT.',
+            'conta_id.required_without' => 'Selecione uma conta ou um cartão para vincular.',
+            'cartao_id.required_without' => 'Selecione uma conta ou um cartão para vincular.',
         ]);
 
         $importacao = $this->importService->createImportacao(
@@ -154,5 +157,21 @@ class ImportacaoController extends Controller
             'itens_duplicados' => $importacao->itens_duplicados,
             'itens_erro' => $importacao->itens_erro,
         ]);
+    }
+
+    public function rename(Request $request, Importacao $importacao)
+    {
+        $this->authorize('update', $importacao);
+
+        $validated = $request->validate([
+            'nome' => 'required|string|max:255',
+        ], [
+            'nome.required' => 'O nome é obrigatório.',
+            'nome.max' => 'O nome deve ter no máximo 255 caracteres.',
+        ]);
+
+        $importacao->update(['nome' => $validated['nome']]);
+
+        return back()->with('success', 'Nome atualizado com sucesso!');
     }
 }

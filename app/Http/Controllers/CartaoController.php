@@ -134,6 +134,7 @@ class CartaoController extends Controller
 
         $cartao = Cartao::create([
             'user_id' => $user->id,
+            'limite' => $validated['limite'] ?? 0,
             ...$validated,
         ]);
 

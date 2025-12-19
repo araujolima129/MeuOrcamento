@@ -71,6 +71,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/importar/{importacao}/mapeamento', [ImportacaoController::class, 'saveMapping'])->name('importar.mapeamento');
     Route::post('/importar/{importacao}/processar', [ImportacaoController::class, 'processar'])->name('importar.processar');
     Route::get('/importar/{importacao}/status', [ImportacaoController::class, 'status'])->name('importar.status');
+    Route::put('/importar/{importacao}/rename', [ImportacaoController::class, 'rename'])->name('importar.rename');
 
     // Metas
     Route::get('/metas', [MetaController::class, 'index'])->name('metas.index');
