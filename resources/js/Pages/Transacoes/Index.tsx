@@ -356,13 +356,15 @@ export default function Index({ transacoes, categorias, responsaveis, filtros }:
                                             <td className="whitespace-nowrap px-4 py-3 text-right">
                                                 <div className="flex items-center justify-end gap-2">
                                                     <button
-                                                        onClick={() => openEditModal(t)}
+                                                        type="button"
+                                                        onClick={(e) => { e.stopPropagation(); openEditModal(t); }}
                                                         className="rounded-lg p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
                                                     >
                                                         <Edit2 className="h-4 w-4" />
                                                     </button>
                                                     <button
-                                                        onClick={() => handleDelete(t.id)}
+                                                        type="button"
+                                                        onClick={(e) => { e.stopPropagation(); handleDelete(t.id); }}
                                                         className="rounded-lg p-1.5 text-gray-400 hover:bg-rose-50 hover:text-rose-600"
                                                     >
                                                         <Trash2 className="h-4 w-4" />
