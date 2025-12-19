@@ -7,6 +7,7 @@ use App\Models\Categoria;
 use App\Models\Meta;
 use App\Models\Transacao;
 use App\Services\BudgetService;
+use App\Services\StatementCycleService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -14,7 +15,8 @@ use Inertia\Inertia;
 class DashboardController extends Controller
 {
     public function __construct(
-        protected BudgetService $budgetService
+        protected BudgetService $budgetService,
+        protected StatementCycleService $cycleService
     ) {
     }
 
@@ -23,6 +25,9 @@ class DashboardController extends Controller
         $user = $request->user();
         $mes = $request->get('mes', now()->month);
         $ano = $request->get('ano', now()->year);
+
+        // Fecha automaticamente ciclos de fatura que já passaram
+        $this->cycleService->fecharCiclosAutomaticamente($user->id);
 
         // Resumo do orçamento
         $orcamento = $this->budgetService->getResumoMensal($user->id, $mes, $ano);
@@ -110,17 +115,19 @@ class DashboardController extends Controller
                 'categoria_icone' => $t->categoria?->icone,
             ]);
 
-        // Receitas x Despesas do mês
+        // Receitas x Despesas do mês (exclui transações de cartão, apenas faturas consolidadas contam)
         $totalReceitas = Transacao::where('user_id', $user->id)
             ->where('tipo', 'receita')
             ->whereYear('data', $ano)
             ->whereMonth('data', $mes)
+            ->whereNull('cartao_id') // Exclui transações de cartão
             ->sum('valor');
 
         $totalDespesas = Transacao::where('user_id', $user->id)
             ->where('tipo', 'despesa')
             ->whereYear('data', $ano)
             ->whereMonth('data', $mes)
+            ->whereNull('cartao_id') // Exclui transações de cartão
             ->sum('valor');
 
         return Inertia::render('Dashboard', [

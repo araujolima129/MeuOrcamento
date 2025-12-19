@@ -18,6 +18,9 @@ interface Transacao {
     identificador?: string;
     is_duplicate?: boolean;
     duplicate_ids?: number[];
+    parcelada?: boolean;
+    parcela_atual?: number;
+    parcela_total?: number;
 }
 
 interface Props {
@@ -231,12 +234,24 @@ export default function Preview({
                                             )}
                                         </td>
                                         <td className="p-4">
-                                            <p className="font-medium text-gray-900">
-                                                {transacao.descricao}
-                                            </p>
+                                            <div className="flex items-center gap-2">
+                                                <p className="font-medium text-gray-900">
+                                                    {transacao.descricao}
+                                                </p>
+                                                {transacao.parcelada && (
+                                                    <span className="inline-flex items-center rounded-full bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-700">
+                                                        {transacao.parcela_atual}/{transacao.parcela_total}
+                                                    </span>
+                                                )}
+                                            </div>
                                             {transacao.identificador && (
                                                 <p className="text-xs text-gray-400">
                                                     ID: {transacao.identificador}
+                                                </p>
+                                            )}
+                                            {transacao.parcelada && transacao.parcela_atual && transacao.parcela_total && transacao.parcela_atual < transacao.parcela_total && (
+                                                <p className="text-xs text-purple-500">
+                                                    + {transacao.parcela_total - transacao.parcela_atual} parcelas futuras serão criadas
                                                 </p>
                                             )}
                                         </td>

@@ -99,13 +99,100 @@ class StatementCycleService
     }
 
     /**
-     * Fecha um ciclo de fatura.
+     * Fecha um ciclo de fatura e cria a transação consolidada.
      */
     public function fecharCiclo(CicloFatura $ciclo): void
     {
         $ciclo->recalcularTotal();
         $ciclo->status = 'fechada';
         $ciclo->save();
+
+        // Cria a transação consolidada (fatura) se houver valor
+        if ($ciclo->valor_total > 0) {
+            $this->criarFaturaConsolidada($ciclo);
+        }
+    }
+
+    /**
+     * Cria a transação consolidada da fatura.
+     * Esta transação representa o pagamento da fatura e impacta o orçamento.
+     */
+    protected function criarFaturaConsolidada(CicloFatura $ciclo): \App\Models\Transacao
+    {
+        $cartao = $ciclo->cartao;
+        $mesNome = $this->getNomeMes($ciclo->mes);
+
+        // Verifica se já existe fatura consolidada para este ciclo
+        $faturaExistente = \App\Models\Transacao::where('ciclo_fatura_id', $ciclo->id)
+            ->where('forma_pagamento', 'fatura_cartao')
+            ->first();
+
+        if ($faturaExistente) {
+            // Atualiza valor se já existe
+            $faturaExistente->valor = $ciclo->valor_total;
+            $faturaExistente->save();
+            return $faturaExistente;
+        }
+
+        // Cria nova fatura consolidada
+        return \App\Models\Transacao::create([
+            'user_id' => $cartao->user_id,
+            'cartao_id' => null, // NÃO é transação de cartão, é pagamento
+            'conta_id' => null, // Usuário escolhe de onde paga depois
+            'ciclo_fatura_id' => $ciclo->id,
+            'data' => $ciclo->data_vencimento,
+            'data_competencia' => $ciclo->data_vencimento,
+            'descricao_original' => "Fatura {$cartao->nome} - {$mesNome}/{$ciclo->ano}",
+            'valor' => $ciclo->valor_total,
+            'tipo' => 'despesa',
+            'forma_pagamento' => 'fatura_cartao',
+        ]);
+    }
+
+    /**
+     * Retorna o nome do mês.
+     */
+    protected function getNomeMes(int $mes): string
+    {
+        $meses = [
+            1 => 'Janeiro',
+            2 => 'Fevereiro',
+            3 => 'Março',
+            4 => 'Abril',
+            5 => 'Maio',
+            6 => 'Junho',
+            7 => 'Julho',
+            8 => 'Agosto',
+            9 => 'Setembro',
+            10 => 'Outubro',
+            11 => 'Novembro',
+            12 => 'Dezembro',
+        ];
+        return $meses[$mes] ?? '';
+    }
+
+    /**
+     * Fecha automaticamente ciclos que já passaram da data de fechamento.
+     */
+    public function fecharCiclosAutomaticamente(int $userId): int
+    {
+        $hoje = Carbon::now();
+        $ciclosFechados = 0;
+
+        // Busca ciclos abertos onde a data de fechamento já passou
+        $ciclosParaFechar = CicloFatura::whereHas('cartao', function ($q) use ($userId) {
+            $q->where('user_id', $userId);
+        })
+            ->where('status', 'aberta')
+            ->where('data_fim', '<', $hoje)
+            ->get();
+
+        foreach ($ciclosParaFechar as $ciclo) {
+            $this->fecharCiclo($ciclo);
+            $ciclosFechados++;
+        }
+
+        return $ciclosFechados;
     }
 
     /**

@@ -7,8 +7,10 @@ use App\Models\ImportacaoItem;
 use App\Models\Transacao;
 use App\Services\Parsers\CsvParser;
 use App\Services\Parsers\OfxParser;
+use App\Services\Parsers\ParcelaParser;
 use App\Services\Parsers\ParserInterface;
 use App\Services\Parsers\TxtParser;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;
@@ -18,10 +20,14 @@ class ImportService
 {
     protected array $parsers = [];
     protected DedupeService $dedupeService;
+    protected ParcelaParser $parcelaParser;
+    protected StatementCycleService $cycleService;
 
-    public function __construct(DedupeService $dedupeService)
+    public function __construct(DedupeService $dedupeService, StatementCycleService $cycleService)
     {
         $this->dedupeService = $dedupeService;
+        $this->cycleService = $cycleService;
+        $this->parcelaParser = new ParcelaParser();
         $this->parsers = [
             new OfxParser(),
             new CsvParser(),
@@ -100,6 +106,9 @@ class ImportService
                 $hash
             );
 
+            // Detecta parcela
+            $parcelaInfo = $this->parcelaParser->parse($t['descricao']);
+
             return [
                 'index' => $index,
                 'data' => $t['data'],
@@ -110,6 +119,9 @@ class ImportService
                 'hash' => $hash,
                 'is_duplicate' => $duplicates->isNotEmpty(),
                 'duplicate_ids' => $duplicates->pluck('id')->toArray(),
+                'parcelada' => $parcelaInfo !== null,
+                'parcela_atual' => $parcelaInfo['parcela_atual'] ?? null,
+                'parcela_total' => $parcelaInfo['parcela_total'] ?? null,
             ];
         });
     }
@@ -207,8 +219,13 @@ class ImportService
                     continue;
                 }
 
-                // Cria a transação
+                // Analisa dados originais
                 $data = $item->dados_originais;
+
+                // Detecta parcela
+                $parcelaInfo = $this->parcelaParser->parse($data['descricao']);
+
+                // Cria a transação principal
                 $transacao = Transacao::create([
                     'user_id' => $importacao->user_id,
                     'conta_id' => $importacao->conta_id,
@@ -220,12 +237,87 @@ class ImportService
                     'tipo' => $data['tipo'],
                     'identificador_externo' => $data['identificador'] ?? null,
                     'hash_dedupe' => $item->hash_dedupe,
+                    'parcelada' => $parcelaInfo !== null,
+                    'parcela_atual' => $parcelaInfo['parcela_atual'] ?? null,
+                    'parcela_total' => $parcelaInfo['parcela_total'] ?? null,
                 ]);
+
+                // Se for transação de cartão, associa ao ciclo de fatura
+                if ($importacao->cartao_id) {
+                    $cartao = $importacao->cartao;
+                    if ($cartao) {
+                        $this->cycleService->atribuirTransacaoAoCiclo($cartao, $transacao);
+                    }
+                }
+
+                // Se for parcelada, cria parcelas futuras
+                if ($parcelaInfo !== null) {
+                    $this->criarParcelasFuturas($transacao, $parcelaInfo, $importacao);
+                }
 
                 $item->marcarImportado($transacao);
 
             } catch (Exception $e) {
                 $item->marcarErro($e->getMessage());
+            }
+        }
+    }
+
+    /**
+     * Cria as parcelas futuras de uma transação parcelada.
+     */
+    protected function criarParcelasFuturas(Transacao $transacaoPai, array $parcelaInfo, Importacao $importacao): void
+    {
+        $parcelaAtual = $parcelaInfo['parcela_atual'];
+        $parcelaTotal = $parcelaInfo['parcela_total'];
+        $descricaoLimpa = $parcelaInfo['descricao_limpa'];
+
+        // Atualiza a transação pai com o ID dela mesma como transacao_pai_id
+        $transacaoPai->transacao_pai_id = $transacaoPai->id;
+        $transacaoPai->save();
+
+        // Obtém o cartão para associar parcelas ao ciclo
+        $cartao = $importacao->cartao;
+
+        // Cria parcelas futuras (da parcela atual + 1 até o total)
+        for ($i = $parcelaAtual + 1; $i <= $parcelaTotal; $i++) {
+            $dataFutura = Carbon::parse($transacaoPai->data)->addMonths($i - $parcelaAtual);
+
+            $descricaoParcela = $descricaoLimpa . " PARC {$i}/{$parcelaTotal}";
+
+            // Gera hash único para a parcela futura
+            $hashFuturo = $this->dedupeService->generateHash([
+                'data' => $dataFutura->format('Y-m-d'),
+                'valor' => $transacaoPai->valor,
+                'descricao' => $descricaoParcela,
+                'identificador' => $transacaoPai->identificador_externo . "_PARC{$i}",
+            ]);
+
+            // Verifica se já existe (evita duplicatas)
+            if ($this->dedupeService->isDuplicate($importacao->user_id, $hashFuturo)) {
+                continue;
+            }
+
+            $parcela = Transacao::create([
+                'user_id' => $importacao->user_id,
+                'conta_id' => $importacao->conta_id,
+                'cartao_id' => $importacao->cartao_id,
+                'data' => $dataFutura,
+                'data_competencia' => $dataFutura,
+                'descricao_original' => $descricaoParcela,
+                'valor' => $transacaoPai->valor,
+                'tipo' => $transacaoPai->tipo,
+                'identificador_externo' => $transacaoPai->identificador_externo . "_PARC{$i}",
+                'hash_dedupe' => $hashFuturo,
+                'parcelada' => true,
+                'parcela_atual' => $i,
+                'parcela_total' => $parcelaTotal,
+                'transacao_pai_id' => $transacaoPai->id,
+            ]);
+
+            // Associa ao ciclo de fatura correspondente
+            if ($cartao) {
+                $this->cycleService->atribuirTransacaoAoCiclo($cartao, $parcela);
             }
         }
     }
