@@ -30,9 +30,12 @@ class TransacaoController extends Controller
         $search = $request->get('search');
 
         $query = Transacao::where('user_id', $user->id)
-            ->with(['categoria', 'subcategoria', 'responsavel', 'conta', 'cartao'])
-            ->whereYear('data', $ano)
-            ->whereMonth('data', $mes);
+            ->with(['categoria', 'subcategoria', 'responsavel', 'conta', 'cartao']);
+
+        // Se mes=0, mostra todas as transações (sem filtro de período)
+        if ($mes != 0) {
+            $query->whereYear('data', $ano)->whereMonth('data', $mes);
+        }
 
         if ($tipo) {
             $query->where('tipo', $tipo);

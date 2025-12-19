@@ -77,7 +77,7 @@ function formatCurrency(value: number): string {
 }
 
 const meses = [
-    'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+    'Todos', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',
 ];
 
@@ -192,7 +192,7 @@ export default function Index({ transacoes, categorias, responsaveis, filtros }:
                             className="rounded-xl border-gray-200 bg-white py-2 pl-3 pr-8 text-sm font-medium shadow-sm focus:border-pink-500 focus:ring-pink-500"
                         >
                             {meses.map((m, i) => (
-                                <option key={i} value={i + 1}>{m}</option>
+                                <option key={i} value={i}>{m}</option>
                             ))}
                         </select>
                         <select
