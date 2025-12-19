@@ -1,0 +1,838 @@
+Running 2.9.2 (2025-11-19 21:57:25) with PHP 8.3.29 on Windows NT / 10.0
+Reading ./composer.json (C:\www\MeuOrcamento\composer.json)
+Loading config file ./composer.json (C:\www\MeuOrcamento\composer.json)
+Checked CA file /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem does not exist or it is not a file.
+Checked directory /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem does not exist or it is not a directory.
+Checked CA file /etc/pki/tls/certs/ca-bundle.crt does not exist or it is not a file.
+Checked directory /etc/pki/tls/certs/ca-bundle.crt does not exist or it is not a directory.
+Checked CA file /etc/ssl/certs/ca-certificates.crt does not exist or it is not a file.
+Checked directory /etc/ssl/certs/ca-certificates.crt does not exist or it is not a directory.
+Checked CA file /etc/ssl/ca-bundle.pem does not exist or it is not a file.
+Checked directory /etc/ssl/ca-bundle.pem does not exist or it is not a directory.
+Checked CA file /usr/ssl/certs/ca-bundle.crt does not exist or it is not a file.
+Checked directory /usr/ssl/certs/ca-bundle.crt does not exist or it is not a directory.
+Checked CA file /opt/local/share/curl/curl-ca-bundle.crt does not exist or it is not a file.
+Checked directory /opt/local/share/curl/curl-ca-bundle.crt does not exist or it is not a directory.
+Checked CA file /usr/local/share/curl/curl-ca-bundle.crt does not exist or it is not a file.
+Checked directory /usr/local/share/curl/curl-ca-bundle.crt does not exist or it is not a directory.
+Checked CA file /usr/share/ssl/certs/ca-bundle.crt does not exist or it is not a file.
+Checked directory /usr/share/ssl/certs/ca-bundle.crt does not exist or it is not a directory.
+Checked CA file /etc/ssl/cert.pem does not exist or it is not a file.
+Checked directory /etc/ssl/cert.pem does not exist or it is not a directory.
+Checked CA file /usr/local/etc/openssl/cert.pem does not exist or it is not a file.
+Checked directory /usr/local/etc/openssl/cert.pem does not exist or it is not a directory.
+Checked CA file /usr/local/etc/openssl@1.1/cert.pem does not exist or it is not a file.
+Checked directory /usr/local/etc/openssl@1.1/cert.pem does not exist or it is not a directory.
+Checked CA file /opt/homebrew/etc/openssl@3/cert.pem does not exist or it is not a file.
+Checked directory /opt/homebrew/etc/openssl@3/cert.pem does not exist or it is not a directory.
+Checked CA file /opt/homebrew/etc/openssl@1.1/cert.pem does not exist or it is not a file.
+Checked directory /opt/homebrew/etc/openssl@1.1/cert.pem does not exist or it is not a directory.
+Checked CA file /etc/pki/tls/certs does not exist or it is not a file.
+Checked directory /etc/pki/tls/certs does not exist or it is not a directory.
+Checked CA file /etc/ssl/certs does not exist or it is not a file.
+Checked directory /etc/ssl/certs does not exist or it is not a directory.
+Checked CA file C:\Users\Chefe-P4\AppData\Local\Temp\opeAA57.tmp: valid
+Executing command (C:\www\MeuOrcamento): git branch -a --no-color --no-abbrev -v
+Executing command (C:\www\MeuOrcamento): git describe --exact-match --tags
+Executing command (C:\www\MeuOrcamento): git log --pretty=%H -n1 HEAD --no-show-signature
+Executing command (C:\www\MeuOrcamento): hg branch
+Executing command (C:\www\MeuOrcamento): fossil branch list
+Executing command (C:\www\MeuOrcamento): fossil tag list
+Executing command (C:\www\MeuOrcamento): svn info --xml
+Failed to initialize global composer: Composer could not find the config file: C:/Users/Chefe-P4/AppData/Roaming/Composer/composer.json
+
+Reading C:\www\MeuOrcamento/vendor/composer/installed.json (C:\www\MeuOrcamento\vendor\composer\installed.json)
+Reading ./composer.lock (C:\www\MeuOrcamento\composer.lock)
+Loading composer repositories with package information
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/packages.json from cache
+Downloading https://repo.packagist.org/packages.json if modified
+[304] https://repo.packagist.org/packages.json
+Downloading https://repo.packagist.org/p2/inertiajs/inertia-laravel.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~framework.json from cache
+Downloading https://repo.packagist.org/p2/laravel/framework.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~tinker.json from cache
+Downloading https://repo.packagist.org/p2/laravel/tinker.json if modified
+Downloading https://repo.packagist.org/p2/tightenco/ziggy.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-fakerphp~faker.json from cache
+Downloading https://repo.packagist.org/p2/fakerphp/faker.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~breeze.json from cache
+Downloading https://repo.packagist.org/p2/laravel/breeze.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~pail.json from cache
+Downloading https://repo.packagist.org/p2/laravel/pail.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~pint.json from cache
+Downloading https://repo.packagist.org/p2/laravel/pint.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~sail.json from cache
+Downloading https://repo.packagist.org/p2/laravel/sail.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-mockery~mockery.json from cache
+Downloading https://repo.packagist.org/p2/mockery/mockery.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nunomaduro~collision.json from cache
+Downloading https://repo.packagist.org/p2/nunomaduro/collision.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~phpunit.json from cache
+Downloading https://repo.packagist.org/p2/phpunit/phpunit.json if modified
+[200] https://repo.packagist.org/p2/inertiajs/inertia-laravel.json
+Writing C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-inertiajs~inertia-laravel.json into cache
+[304] https://repo.packagist.org/p2/laravel/framework.json
+[304] https://repo.packagist.org/p2/laravel/tinker.json
+[200] https://repo.packagist.org/p2/tightenco/ziggy.json
+Writing C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-tightenco~ziggy.json into cache
+[304] https://repo.packagist.org/p2/fakerphp/faker.json
+[304] https://repo.packagist.org/p2/laravel/breeze.json
+[304] https://repo.packagist.org/p2/laravel/pail.json
+[304] https://repo.packagist.org/p2/laravel/pint.json
+[304] https://repo.packagist.org/p2/laravel/sail.json
+[304] https://repo.packagist.org/p2/mockery/mockery.json
+[304] https://repo.packagist.org/p2/nunomaduro/collision.json
+[304] https://repo.packagist.org/p2/phpunit/phpunit.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~console.json from cache
+Downloading https://repo.packagist.org/p2/symfony/console.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-brick~math.json from cache
+Downloading https://repo.packagist.org/p2/brick/math.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~inflector.json from cache
+Downloading https://repo.packagist.org/p2/doctrine/inflector.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-dragonmantank~cron-expression.json from cache
+Downloading https://repo.packagist.org/p2/dragonmantank/cron-expression.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-egulias~email-validator.json from cache
+Downloading https://repo.packagist.org/p2/egulias/email-validator.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-fruitcake~php-cors.json from cache
+Downloading https://repo.packagist.org/p2/fruitcake/php-cors.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~guzzle.json from cache
+Downloading https://repo.packagist.org/p2/guzzlehttp/guzzle.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~uri-template.json from cache
+Downloading https://repo.packagist.org/p2/guzzlehttp/uri-template.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~prompts.json from cache
+Downloading https://repo.packagist.org/p2/laravel/prompts.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~serializable-closure.json from cache
+Downloading https://repo.packagist.org/p2/laravel/serializable-closure.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~commonmark.json from cache
+Downloading https://repo.packagist.org/p2/league/commonmark.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem.json from cache
+Downloading https://repo.packagist.org/p2/league/flysystem.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem-local.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~uri.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-monolog~monolog.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nesbot~carbon.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nunomaduro~termwind.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~container.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~log.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~simple-cache.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ramsey~uuid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~error-handler.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~finder.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~http-foundation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~http-kernel.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mailer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mime.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php83.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php84.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php85.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~process.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~routing.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~uid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~var-dumper.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-tijsverkoyen~css-to-inline-styles.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-vlucas~phpdotenv.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-voku~portable-ascii.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phiki~phiki.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~console.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~support.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psy~psysh.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~deprecation-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~filesystem.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~log.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~process.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~yaml.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-hamcrest~hamcrest-php.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-filp~whoops.json from cache
+[304] https://repo.packagist.org/p2/symfony/console.json
+[304] https://repo.packagist.org/p2/brick/math.json
+[304] https://repo.packagist.org/p2/doctrine/inflector.json
+[304] https://repo.packagist.org/p2/dragonmantank/cron-expression.json
+[304] https://repo.packagist.org/p2/egulias/email-validator.json
+[304] https://repo.packagist.org/p2/fruitcake/php-cors.json
+[304] https://repo.packagist.org/p2/guzzlehttp/guzzle.json
+[304] https://repo.packagist.org/p2/guzzlehttp/uri-template.json
+[304] https://repo.packagist.org/p2/laravel/prompts.json
+[304] https://repo.packagist.org/p2/laravel/serializable-closure.json
+[304] https://repo.packagist.org/p2/league/commonmark.json
+[304] https://repo.packagist.org/p2/league/flysystem.json
+Downloading https://repo.packagist.org/p2/league/flysystem-local.json if modified
+Downloading https://repo.packagist.org/p2/league/uri.json if modified
+Downloading https://repo.packagist.org/p2/monolog/monolog.json if modified
+Downloading https://repo.packagist.org/p2/nesbot/carbon.json if modified
+Downloading https://repo.packagist.org/p2/nunomaduro/termwind.json if modified
+Downloading https://repo.packagist.org/p2/psr/container.json if modified
+Downloading https://repo.packagist.org/p2/psr/log.json if modified
+Downloading https://repo.packagist.org/p2/psr/simple-cache.json if modified
+Downloading https://repo.packagist.org/p2/ramsey/uuid.json if modified
+Downloading https://repo.packagist.org/p2/symfony/error-handler.json if modified
+Downloading https://repo.packagist.org/p2/symfony/finder.json if modified
+Downloading https://repo.packagist.org/p2/symfony/http-foundation.json if modified
+[304] https://repo.packagist.org/p2/league/uri.json
+Downloading https://repo.packagist.org/p2/symfony/http-kernel.json if modified
+[304] https://repo.packagist.org/p2/league/flysystem-local.json
+[304] https://repo.packagist.org/p2/monolog/monolog.json
+[304] https://repo.packagist.org/p2/nesbot/carbon.json
+[304] https://repo.packagist.org/p2/nunomaduro/termwind.json
+[304] https://repo.packagist.org/p2/psr/container.json
+[304] https://repo.packagist.org/p2/psr/log.json
+[304] https://repo.packagist.org/p2/psr/simple-cache.json
+[304] https://repo.packagist.org/p2/ramsey/uuid.json
+[304] https://repo.packagist.org/p2/symfony/error-handler.json
+[304] https://repo.packagist.org/p2/symfony/finder.json
+[304] https://repo.packagist.org/p2/symfony/http-foundation.json
+Downloading https://repo.packagist.org/p2/symfony/mailer.json if modified
+Downloading https://repo.packagist.org/p2/symfony/mime.json if modified
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php83.json if modified
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php84.json if modified
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php85.json if modified
+Downloading https://repo.packagist.org/p2/symfony/process.json if modified
+Downloading https://repo.packagist.org/p2/symfony/routing.json if modified
+Downloading https://repo.packagist.org/p2/symfony/uid.json if modified
+Downloading https://repo.packagist.org/p2/symfony/var-dumper.json if modified
+Downloading https://repo.packagist.org/p2/tijsverkoyen/css-to-inline-styles.json if modified
+Downloading https://repo.packagist.org/p2/vlucas/phpdotenv.json if modified
+[304] https://repo.packagist.org/p2/symfony/http-kernel.json
+Downloading https://repo.packagist.org/p2/voku/portable-ascii.json if modified
+[304] https://repo.packagist.org/p2/symfony/mailer.json
+[304] https://repo.packagist.org/p2/symfony/mime.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-php83.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-php84.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-php85.json
+[304] https://repo.packagist.org/p2/symfony/process.json
+[304] https://repo.packagist.org/p2/symfony/routing.json
+[304] https://repo.packagist.org/p2/symfony/uid.json
+[304] https://repo.packagist.org/p2/symfony/var-dumper.json
+[304] https://repo.packagist.org/p2/tijsverkoyen/css-to-inline-styles.json
+[304] https://repo.packagist.org/p2/vlucas/phpdotenv.json
+Downloading https://repo.packagist.org/p2/phiki/phiki.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/console.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/contracts.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/support.json if modified
+Downloading https://repo.packagist.org/p2/psy/psysh.json if modified
+Downloading https://repo.packagist.org/p2/symfony/deprecation-contracts.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/filesystem.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/validation.json
+Downloading https://repo.packagist.org/p2/illuminate/log.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/process.json if modified
+Downloading https://repo.packagist.org/p2/symfony/yaml.json if modified
+[304] https://repo.packagist.org/p2/voku/portable-ascii.json
+Downloading https://repo.packagist.org/p2/hamcrest/hamcrest-php.json if modified
+[304] https://repo.packagist.org/p2/phiki/phiki.json
+[304] https://repo.packagist.org/p2/illuminate/console.json
+[304] https://repo.packagist.org/p2/illuminate/contracts.json
+Downloading https://repo.packagist.org/p2/filp/whoops.json if modified
+[304] https://repo.packagist.org/p2/illuminate/support.json
+[304] https://repo.packagist.org/p2/psy/psysh.json
+[304] https://repo.packagist.org/p2/symfony/deprecation-contracts.json
+[304] https://repo.packagist.org/p2/illuminate/filesystem.json
+[304] https://repo.packagist.org/p2/illuminate/log.json
+[304] https://repo.packagist.org/p2/illuminate/process.json
+[304] https://repo.packagist.org/p2/symfony/yaml.json
+[304] https://repo.packagist.org/p2/hamcrest/hamcrest-php.json
+[200] https://repo.packagist.org/p2/illuminate/validation.json
+Writing C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~validation.json into cache
+[304] https://repo.packagist.org/p2/filp/whoops.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-myclabs~deep-copy.json from cache
+Downloading https://repo.packagist.org/p2/myclabs/deep-copy.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phar-io~manifest.json from cache
+Downloading https://repo.packagist.org/p2/phar-io/manifest.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phar-io~version.json from cache
+Downloading https://repo.packagist.org/p2/phar-io/version.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-code-coverage.json from cache
+Downloading https://repo.packagist.org/p2/phpunit/php-code-coverage.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-file-iterator.json from cache
+Downloading https://repo.packagist.org/p2/phpunit/php-file-iterator.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-invoker.json from cache
+Downloading https://repo.packagist.org/p2/phpunit/php-invoker.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-text-template.json from cache
+Downloading https://repo.packagist.org/p2/phpunit/php-text-template.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-timer.json from cache
+Downloading https://repo.packagist.org/p2/phpunit/php-timer.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~cli-parser.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/cli-parser.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~code-unit.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/code-unit.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~comparator.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/comparator.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~diff.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/diff.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~environment.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~exporter.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~global-state.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~object-enumerator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~type.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~version.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-staabm~side-effects-detector.json from cache
+[304] https://repo.packagist.org/p2/phar-io/manifest.json
+[304] https://repo.packagist.org/p2/phar-io/version.json
+[304] https://repo.packagist.org/p2/phpunit/php-code-coverage.json
+[304] https://repo.packagist.org/p2/phpunit/php-file-iterator.json
+Downloading https://repo.packagist.org/p2/sebastian/environment.json if modified
+Downloading https://repo.packagist.org/p2/sebastian/exporter.json if modified
+Downloading https://repo.packagist.org/p2/sebastian/global-state.json if modified
+Downloading https://repo.packagist.org/p2/sebastian/object-enumerator.json if modified
+[304] https://repo.packagist.org/p2/myclabs/deep-copy.json
+[304] https://repo.packagist.org/p2/phpunit/php-invoker.json
+[304] https://repo.packagist.org/p2/phpunit/php-text-template.json
+[304] https://repo.packagist.org/p2/phpunit/php-timer.json
+[304] https://repo.packagist.org/p2/sebastian/cli-parser.json
+[304] https://repo.packagist.org/p2/sebastian/code-unit.json
+[304] https://repo.packagist.org/p2/sebastian/comparator.json
+[304] https://repo.packagist.org/p2/sebastian/diff.json
+Downloading https://repo.packagist.org/p2/sebastian/type.json if modified
+Downloading https://repo.packagist.org/p2/sebastian/version.json if modified
+Downloading https://repo.packagist.org/p2/staabm/side-effects-detector.json if modified
+[304] https://repo.packagist.org/p2/sebastian/environment.json
+[304] https://repo.packagist.org/p2/sebastian/exporter.json
+[304] https://repo.packagist.org/p2/sebastian/global-state.json
+[304] https://repo.packagist.org/p2/sebastian/object-enumerator.json
+[304] https://repo.packagist.org/p2/sebastian/type.json
+[304] https://repo.packagist.org/p2/sebastian/version.json
+[304] https://repo.packagist.org/p2/staabm/side-effects-detector.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-mbstring.json from cache
+Downloading https://repo.packagist.org/p2/symfony/polyfill-mbstring.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~service-contracts.json from cache
+Downloading https://repo.packagist.org/p2/symfony/service-contracts.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~string.json from cache
+Downloading https://repo.packagist.org/p2/symfony/string.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~deprecation-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-webmozart~assert.json from cache
+Downloading https://repo.packagist.org/p2/webmozart/assert.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~lexer.json from cache
+Downloading https://repo.packagist.org/p2/doctrine/lexer.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-idn.json from cache
+Downloading https://repo.packagist.org/p2/symfony/polyfill-intl-idn.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~http-foundation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~promises.json from cache
+Downloading https://repo.packagist.org/p2/guzzlehttp/promises.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~psr7.json from cache
+Downloading https://repo.packagist.org/p2/guzzlehttp/psr7.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-client.json from cache
+Downloading https://repo.packagist.org/p2/psr/http-client.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php80.json from cache
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php80.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~config.json from cache
+Downloading https://repo.packagist.org/p2/league/config.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~event-dispatcher.json from cache
+Downloading https://repo.packagist.org/p2/psr/event-dispatcher.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem-local.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~mime-type-detection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~uri-interfaces.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-factory.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-carbonphp~carbon-doctrine-types.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~clock.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~clock.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~console.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-brick~math.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ramsey~collection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~var-dumper.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php83.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~error-handler.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~event-dispatcher.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-ctype.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-egulias~email-validator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mime.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-uuid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php72.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~css-selector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-graham-campbell~result-type.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpoption~phpoption.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~commonmark.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~collections.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~macroable.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~view.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~prompts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~process.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nunomaduro~termwind.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~inflector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~conditionable.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~reflection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nesbot~carbon.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-voku~portable-ascii.json from cache
+[304] https://repo.packagist.org/p2/symfony/polyfill-mbstring.json
+[304] https://repo.packagist.org/p2/symfony/service-contracts.json
+[304] https://repo.packagist.org/p2/symfony/string.json
+[304] https://repo.packagist.org/p2/webmozart/assert.json
+[304] https://repo.packagist.org/p2/doctrine/lexer.json
+Downloading https://repo.packagist.org/p2/league/mime-type-detection.json if modified
+Downloading https://repo.packagist.org/p2/league/uri-interfaces.json if modified
+Downloading https://repo.packagist.org/p2/psr/http-factory.json if modified
+Downloading https://repo.packagist.org/p2/carbonphp/carbon-doctrine-types.json if modified
+Downloading https://repo.packagist.org/p2/psr/clock.json if modified
+[304] https://repo.packagist.org/p2/symfony/polyfill-intl-idn.json
+[304] https://repo.packagist.org/p2/guzzlehttp/promises.json
+[304] https://repo.packagist.org/p2/guzzlehttp/psr7.json
+[304] https://repo.packagist.org/p2/psr/http-client.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-php80.json
+[304] https://repo.packagist.org/p2/league/config.json
+[304] https://repo.packagist.org/p2/psr/event-dispatcher.json
+Downloading https://repo.packagist.org/p2/symfony/clock.json if modified
+Downloading https://repo.packagist.org/p2/symfony/translation.json if modified
+Downloading https://repo.packagist.org/p2/ramsey/collection.json if modified
+Downloading https://repo.packagist.org/p2/symfony/event-dispatcher.json if modified
+Downloading https://repo.packagist.org/p2/symfony/polyfill-ctype.json if modified
+Downloading https://repo.packagist.org/p2/symfony/polyfill-uuid.json if modified
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php72.json if modified
+[304] https://repo.packagist.org/p2/league/mime-type-detection.json
+[304] https://repo.packagist.org/p2/league/uri-interfaces.json
+[304] https://repo.packagist.org/p2/psr/http-factory.json
+[304] https://repo.packagist.org/p2/carbonphp/carbon-doctrine-types.json
+[304] https://repo.packagist.org/p2/psr/clock.json
+Downloading https://repo.packagist.org/p2/symfony/css-selector.json if modified
+Downloading https://repo.packagist.org/p2/graham-campbell/result-type.json if modified
+Downloading https://repo.packagist.org/p2/phpoption/phpoption.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/collections.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/macroable.json if modified
+[304] https://repo.packagist.org/p2/symfony/clock.json
+[304] https://repo.packagist.org/p2/symfony/translation.json
+[304] https://repo.packagist.org/p2/ramsey/collection.json
+[304] https://repo.packagist.org/p2/symfony/event-dispatcher.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-ctype.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-uuid.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-php72.json
+Downloading https://repo.packagist.org/p2/illuminate/view.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/conditionable.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/reflection.json if modified
+[304] https://repo.packagist.org/p2/symfony/css-selector.json
+[304] https://repo.packagist.org/p2/graham-campbell/result-type.json
+[304] https://repo.packagist.org/p2/phpoption/phpoption.json
+[304] https://repo.packagist.org/p2/illuminate/collections.json
+[304] https://repo.packagist.org/p2/illuminate/macroable.json
+[304] https://repo.packagist.org/p2/illuminate/view.json
+[304] https://repo.packagist.org/p2/illuminate/conditionable.json
+[304] https://repo.packagist.org/p2/illuminate/reflection.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nikic~php-parser.json from cache
+Downloading https://repo.packagist.org/p2/nikic/php-parser.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~finder.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~container.json from cache
+Downloading https://repo.packagist.org/p2/illuminate/container.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/translation.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phar-io~version.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~code-unit-reverse-lookup.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/code-unit-reverse-lookup.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~complexity.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/complexity.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~lines-of-code.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/lines-of-code.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-theseer~tokenizer.json from cache
+Downloading https://repo.packagist.org/p2/theseer/tokenizer.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~diff.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~exporter.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~recursion-context.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/recursion-context.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~object-reflector.json from cache
+Downloading https://repo.packagist.org/p2/sebastian/object-reflector.json if modified
+[304] https://repo.packagist.org/p2/nikic/php-parser.json
+[304] https://repo.packagist.org/p2/illuminate/container.json
+[200] https://repo.packagist.org/p2/illuminate/translation.json
+Writing C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~translation.json into cache
+[304] https://repo.packagist.org/p2/sebastian/code-unit-reverse-lookup.json
+[304] https://repo.packagist.org/p2/sebastian/complexity.json
+[304] https://repo.packagist.org/p2/sebastian/lines-of-code.json
+[304] https://repo.packagist.org/p2/theseer/tokenizer.json
+[304] https://repo.packagist.org/p2/sebastian/recursion-context.json
+[304] https://repo.packagist.org/p2/sebastian/object-reflector.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mime.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php73.json from cache
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php73.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~string.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~contracts.json from cache
+Downloading https://repo.packagist.org/p2/symfony/contracts.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~debug.json from cache
+Downloading https://repo.packagist.org/p2/symfony/debug.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php80.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~lexer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-carbonphp~carbon-doctrine-types.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-grapheme.json from cache
+Downloading https://repo.packagist.org/p2/symfony/polyfill-intl-grapheme.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-normalizer.json from cache
+Downloading https://repo.packagist.org/p2/symfony/polyfill-intl-normalizer.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~deprecations.json from cache
+Downloading https://repo.packagist.org/p2/doctrine/deprecations.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php70.json from cache
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php70.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-message.json from cache
+Downloading https://repo.packagist.org/p2/psr/http-message.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ralouphie~getallheaders.json from cache
+Downloading https://repo.packagist.org/p2/ralouphie/getallheaders.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-dflydev~dot-access-data.json from cache
+Downloading https://repo.packagist.org/p2/dflydev/dot-access-data.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nette~schema.json from cache
+Downloading https://repo.packagist.org/p2/nette/schema.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation-contracts.json from cache
+Downloading https://repo.packagist.org/p2/symfony/translation-contracts.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php81.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~event-dispatcher-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-paragonie~random_compat.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~events.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~container.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~filesystem.json from cache
+[304] https://repo.packagist.org/p2/symfony/polyfill-php73.json
+Downloading https://repo.packagist.org/p2/symfony/polyfill-php81.json if modified
+[304] https://repo.packagist.org/p2/symfony/contracts.json
+[304] https://repo.packagist.org/p2/symfony/debug.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-intl-grapheme.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-intl-normalizer.json
+[304] https://repo.packagist.org/p2/doctrine/deprecations.json
+[304] https://repo.packagist.org/p2/symfony/polyfill-php70.json
+[304] https://repo.packagist.org/p2/psr/http-message.json
+[304] https://repo.packagist.org/p2/ralouphie/getallheaders.json
+[304] https://repo.packagist.org/p2/dflydev/dot-access-data.json
+[304] https://repo.packagist.org/p2/nette/schema.json
+[304] https://repo.packagist.org/p2/symfony/translation-contracts.json
+Downloading https://repo.packagist.org/p2/symfony/event-dispatcher-contracts.json if modified
+Downloading https://repo.packagist.org/p2/paragonie/random_compat.json if modified
+Downloading https://repo.packagist.org/p2/illuminate/events.json if modified
+[304] https://repo.packagist.org/p2/symfony/polyfill-php81.json
+[304] https://repo.packagist.org/p2/symfony/event-dispatcher-contracts.json
+[304] https://repo.packagist.org/p2/paragonie/random_compat.json
+[304] https://repo.packagist.org/p2/illuminate/events.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~finder.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~cache.json from cache
+Downloading https://repo.packagist.org/p2/psr/cache.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nette~utils.json from cache
+Downloading https://repo.packagist.org/p2/nette/utils.json if modified
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~bus.json from cache
+Downloading https://repo.packagist.org/p2/illuminate/bus.json if modified
+[304] https://repo.packagist.org/p2/psr/cache.json
+[304] https://repo.packagist.org/p2/nette/utils.json
+[304] https://repo.packagist.org/p2/illuminate/bus.json
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~pipeline.json from cache
+Downloading https://repo.packagist.org/p2/illuminate/pipeline.json if modified
+[304] https://repo.packagist.org/p2/illuminate/pipeline.json
+Built pool.
+Running security advisory pool filter.
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-inertiajs~inertia-laravel.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~framework.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~tinker.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-tightenco~ziggy.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-fakerphp~faker.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~breeze.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~pail.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~pint.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~sail.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-mockery~mockery.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nunomaduro~collision.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~phpunit.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~console.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-brick~math.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~inflector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-dragonmantank~cron-expression.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-egulias~email-validator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-fruitcake~php-cors.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~guzzle.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~uri-template.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~prompts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~serializable-closure.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~commonmark.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~uri.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem-local.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-monolog~monolog.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nesbot~carbon.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nunomaduro~termwind.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~container.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~log.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~simple-cache.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ramsey~uuid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~error-handler.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~finder.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~http-foundation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~http-kernel.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mailer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mime.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php83.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php84.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php85.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~process.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~routing.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~uid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~var-dumper.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-tijsverkoyen~css-to-inline-styles.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-vlucas~phpdotenv.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-voku~portable-ascii.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phiki~phiki.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~console.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~support.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psy~psysh.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~deprecation-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~filesystem.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~log.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~process.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~yaml.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-hamcrest~hamcrest-php.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~validation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-filp~whoops.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phar-io~manifest.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phar-io~version.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-code-coverage.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-file-iterator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-myclabs~deep-copy.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-invoker.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-text-template.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-timer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~cli-parser.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~code-unit.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~comparator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~diff.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~environment.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~exporter.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~global-state.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~object-enumerator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~type.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~version.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-staabm~side-effects-detector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-mbstring.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~service-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~string.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-webmozart~assert.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~lexer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-idn.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~promises.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~psr7.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-client.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php80.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~config.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~event-dispatcher.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~mime-type-detection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~uri-interfaces.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-factory.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-carbonphp~carbon-doctrine-types.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~clock.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~clock.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ramsey~collection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~event-dispatcher.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-ctype.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-uuid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php72.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~css-selector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-graham-campbell~result-type.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpoption~phpoption.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~collections.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~macroable.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~view.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~conditionable.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~reflection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nikic~php-parser.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~container.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~translation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~code-unit-reverse-lookup.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~complexity.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~lines-of-code.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-theseer~tokenizer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~recursion-context.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~object-reflector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php73.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~debug.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-grapheme.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-normalizer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~deprecations.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php70.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-message.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ralouphie~getallheaders.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-dflydev~dot-access-data.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nette~schema.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php81.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~event-dispatcher-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-paragonie~random_compat.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~events.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~cache.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nette~utils.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~bus.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-illuminate~pipeline.json from cache
+Security advisory pool filter completed in 0.185 seconds
+Found 10,979 package versions referenced in your dependency graph. 527 (5%) were filtered away.
+Running pool optimizer.
+Pool optimizer completed in 0.690 seconds
+Found 10,452 package versions referenced in your dependency graph. 9,691 (93%) were optimized away.
+Updating dependencies
+Generating rules
+Resolving dependencies through SAT
+Looking at all rules.
+Something's changed, looking at all rules again (pass #1)
+Dependency resolution completed in 0.006 seconds
+Analyzed 761 packages to resolve dependencies
+Analyzed 7504 rules to resolve dependencies
+Generating rules
+Resolving dependencies through SAT
+Looking at all rules.
+
+Dependency resolution completed in 0.000 seconds
+Lock file operations: 2 installs, 0 updates, 0 removals
+Installs: inertiajs/inertia-laravel:v2.0.16, tightenco/ziggy:v2.6.0
+  - Locking inertiajs/inertia-laravel (v2.0.16) from composer repo (https://repo.packagist.org)
+  - Locking tightenco/ziggy (v2.6.0) from composer repo (https://repo.packagist.org)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Reading ./composer.lock (C:\www\MeuOrcamento\composer.lock)
+Package operations: 2 installs, 0 updates, 0 removals
+Installs: inertiajs/inertia-laravel:v2.0.16, tightenco/ziggy:v2.6.0
+  - Downloading inertiajs/inertia-laravel (v2.0.16)
+Downloading https://api.github.com/repos/inertiajs/inertia-laravel/zipball/c060177e1b5120e70d1c26fe7c1007a8c8238f0d
+  - Downloading tightenco/ziggy (v2.6.0)
+Downloading https://api.github.com/repos/tighten/ziggy/zipball/cccc6035c109daab03a33926b3a8499bedbed01f
+[302] https://api.github.com/repos/inertiajs/inertia-laravel/zipball/c060177e1b5120e70d1c26fe7c1007a8c8238f0d
+Following redirect (1) https://codeload.github.com/inertiajs/inertia-laravel/legacy.zip/c060177e1b5120e70d1c26fe7c1007a8c8238f0d
+[302] https://api.github.com/repos/tighten/ziggy/zipball/cccc6035c109daab03a33926b3a8499bedbed01f
+Following redirect (1) https://codeload.github.com/tighten/ziggy/legacy.zip/cccc6035c109daab03a33926b3a8499bedbed01f
+[200] https://codeload.github.com/inertiajs/inertia-laravel/legacy.zip/c060177e1b5120e70d1c26fe7c1007a8c8238f0d
+Writing C:/Users/Chefe-P4/AppData/Local/Composer/files/inertiajs/inertia-laravel/f561dd30528357be3565f24c58c6eabc1caa572e.zip into cache from C:\www\MeuOrcamento/vendor/composer/tmp-2a3012535ea83414575c7a000b88a1e3.zip
+[200] https://codeload.github.com/tighten/ziggy/legacy.zip/cccc6035c109daab03a33926b3a8499bedbed01f
+Writing C:/Users/Chefe-P4/AppData/Local/Composer/files/tightenco/ziggy/f0f346350c48ee1559eb9cde78d8e04b6fe2b0dd.zip into cache from C:\www\MeuOrcamento/vendor/composer/tmp-f39f576f2448fb118f4e55caadb71d5f.zip
+  - Installing inertiajs/inertia-laravel (v2.0.16): Extracting archive
+Executing command (CWD): xcopy C:\www\MeuOrcamento/vendor/composer/162054ca\inertiajs-inertia-laravel-c060177 C:\www\MeuOrcamento\vendor/inertiajs/inertia-laravel /E /I /Q /Y
+Executing async command (CWD): rmdir /S /Q C:\www\MeuOrcamento\vendor\composer\162054ca
+  - Installing tightenco/ziggy (v2.6.0): Extracting archive
+Executing command (CWD): xcopy C:\www\MeuOrcamento/vendor/composer/1ef7736d\tighten-ziggy-cccc603 C:\www\MeuOrcamento\vendor/tightenco/ziggy /E /I /Q /Y
+Executing async command (CWD): rmdir /S /Q C:\www\MeuOrcamento\vendor\composer\1ef7736d
+Downloading https://packagist.org/downloads/
+[201] https://packagist.org/downloads/
+1 package suggestions were added by new dependencies, use `composer suggest` to see details.
+Generating optimized autoload files
+> post-autoload-dump: Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> post-autoload-dump: @php artisan package:discover --ansi
+Executing command (CWD): C:\laragon\bin\php\php-8.3.29-Win32-vs16-x64\php.exe -d allow_url_fopen=1 -d disable_functions="" -d memory_limit=1536M artisan package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  inertiajs/inertia-laravel [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/breeze [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/pail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  tightenco/ziggy [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+
+81 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> post-update-cmd: @php artisan vendor:publish --tag=laravel-assets --ansi --force
+Executing command (CWD): C:\laragon\bin\php\php-8.3.29-Win32-vs16-x64\php.exe -d allow_url_fopen=1 -d disable_functions="" -d memory_limit=1536M artisan vendor:publish --tag=laravel-assets --ansi --force
+
+  [37;44m INFO [39;49m No publishable resources for tag [1m[laravel-assets][22m.  
+
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-brick~math.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-carbonphp~carbon-doctrine-types.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-dflydev~dot-access-data.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~inflector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-doctrine~lexer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-dragonmantank~cron-expression.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-egulias~email-validator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-fakerphp~faker.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-filp~whoops.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-fruitcake~php-cors.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-graham-campbell~result-type.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~guzzle.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~promises.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~psr7.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-guzzlehttp~uri-template.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-hamcrest~hamcrest-php.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~breeze.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~framework.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~pail.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~pint.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~prompts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~sail.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~serializable-closure.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-laravel~tinker.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~commonmark.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~config.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~flysystem-local.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~mime-type-detection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~uri.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-league~uri-interfaces.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-mockery~mockery.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-monolog~monolog.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-myclabs~deep-copy.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nesbot~carbon.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nette~schema.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nette~utils.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nikic~php-parser.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nunomaduro~collision.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-nunomaduro~termwind.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phar-io~manifest.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phar-io~version.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpoption~phpoption.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-code-coverage.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-file-iterator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-invoker.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-text-template.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~php-timer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-phpunit~phpunit.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~clock.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~container.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~event-dispatcher.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-client.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-factory.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~http-message.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~log.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psr~simple-cache.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-psy~psysh.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ralouphie~getallheaders.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ramsey~collection.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-ramsey~uuid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~cli-parser.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~code-unit.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~code-unit-reverse-lookup.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~comparator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~complexity.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~diff.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~environment.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~exporter.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~global-state.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~lines-of-code.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~object-enumerator.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~object-reflector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~recursion-context.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~type.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-sebastian~version.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-staabm~side-effects-detector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~clock.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~console.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~css-selector.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~deprecation-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~error-handler.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~event-dispatcher.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~event-dispatcher-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~finder.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~http-foundation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~http-kernel.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mailer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~mime.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-ctype.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-grapheme.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-idn.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-intl-normalizer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-mbstring.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php80.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php83.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php84.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-php85.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~polyfill-uuid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~process.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~routing.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~service-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~string.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~translation-contracts.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~uid.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~var-dumper.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-symfony~yaml.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-theseer~tokenizer.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-tijsverkoyen~css-to-inline-styles.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-vlucas~phpdotenv.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-voku~portable-ascii.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-inertiajs~inertia-laravel.json from cache
+Reading C:/Users/Chefe-P4/AppData/Local/Composer/repo/https---repo.packagist.org/provider-tightenco~ziggy.json from cache
+No security vulnerability advisories found.
