@@ -1,4 +1,5 @@
 import AppLayout from '@/Layouts/AppLayout';
+import ConfirmModal from '@/Components/ConfirmModal';
 import { Head, router, useForm } from '@inertiajs/react';
 import { useState } from 'react';
 import {
@@ -157,9 +158,22 @@ export default function Index({ transacoes, categorias, responsaveis, filtros }:
         }
     };
 
+    const [deleteId, setDeleteId] = useState<number | null>(null);
+    const [deleting, setDeleting] = useState(false);
+
     const handleDelete = (id: number) => {
-        if (confirm('Tem certeza que deseja excluir esta transação?')) {
-            router.delete(`/transacoes/${id}`);
+        setDeleteId(id);
+    };
+
+    const confirmDelete = () => {
+        if (deleteId) {
+            setDeleting(true);
+            router.delete(`/transacoes/${deleteId}`, {
+                onFinish: () => {
+                    setDeleting(false);
+                    setDeleteId(null);
+                },
+            });
         }
     };
 
@@ -591,6 +605,19 @@ export default function Index({ transacoes, categorias, responsaveis, filtros }:
                     </div>
                 </div>
             )}
+
+            {/* Modal de Confirmação de Exclusão */}
+            <ConfirmModal
+                isOpen={deleteId !== null}
+                onClose={() => setDeleteId(null)}
+                onConfirm={confirmDelete}
+                title="Excluir Transação"
+                message="Tem certeza que deseja excluir esta transação? Esta ação não pode ser desfeita."
+                confirmText="Excluir"
+                cancelText="Cancelar"
+                variant="danger"
+                loading={deleting}
+            />
         </AppLayout>
     );
 }
