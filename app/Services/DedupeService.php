@@ -9,6 +9,7 @@ class DedupeService
 {
     /**
      * Gera um hash único para a transação baseado em seus dados.
+     * NOTA: Não inclui conta_id/cartao_id para detectar duplicados entre diferentes contas/cartões.
      */
     public function generateHash(array $data): string
     {
@@ -17,8 +18,6 @@ class DedupeService
             number_format((float) ($data['valor'] ?? 0), 2, '.', ''),
             $this->normalizeDescription($data['descricao'] ?? ''),
             $data['identificador'] ?? '',
-            $data['conta_id'] ?? '',
-            $data['cartao_id'] ?? '',
         ];
 
         return hash('sha256', implode('|', $components));
@@ -85,8 +84,6 @@ class DedupeService
             'valor' => $transacao->valor,
             'descricao' => $transacao->descricao_original,
             'identificador' => $transacao->identificador_externo,
-            'conta_id' => $transacao->conta_id,
-            'cartao_id' => $transacao->cartao_id,
         ]);
 
         $transacao->hash_dedupe = $hash;
